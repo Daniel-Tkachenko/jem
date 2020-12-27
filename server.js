@@ -91,17 +91,15 @@ app.get('*', (req, res) => {
   });
 });
 
-// https.createServer({
-//  key: fs.readFileSync('./privateKey.txt', 'utf-8'),
-//  cert: fs.readFileSync('./cert.txt', 'utf-8')
-// }, app).listen(8443, () => console.log('listening'));
+https.createServer({
+ key: fs.readFileSync('./privateKey.txt', 'utf-8'),
+ cert: fs.readFileSync('./cert.txt', 'utf-8')
+}, app).listen(8443, () => console.log('listening'));
 
-// http.createServer(app, function(req, res) {
-// res.writeHead(301, { "Location": "https://jem.productions" + req.url });
-// res.end();
-// }).listen(7777, () => console.log('list 7777'));
+http.createServer(app, function(req, res) {
+res.writeHead(301, { "Location": "https://jem.productions" + req.url });
+res.end();
+}).listen(7777, () => console.log('list 7777'));
 
 // app.listen(8443, () => console.log('Listening on 8443'));
-app.listen(process.env.PORT, () => {
-  console.log(`app started on port: ${process.env.PORT}`);
-});
+
