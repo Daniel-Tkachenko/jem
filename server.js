@@ -101,5 +101,7 @@ app.get('*', (req, res) => {
 // res.end();
 // }).listen(7777, () => console.log('list 7777'));
 
-app.listen(8443, () => console.log('Listening on 8443'));
-
+// app.listen(8443, () => console.log('Listening on 8443'));
+app.listen(process.env.PORT || 80, () => {
+  console.log(`app started on port: ${process.env.PORT}`);
+});
