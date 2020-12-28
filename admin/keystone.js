@@ -18,7 +18,7 @@ keystone.init({
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'pug',
-	'mongo' : 'mongodb://admin:mUXxvXugD0nzOXb3@cluster0.nj0au.mongodb.net/site',
+	'mongo' : 'mongodb://admin:mUXxvXugD0nzOXb3@cluster0-shard-00-00.nj0au.mongodb.net:27017,cluster0-shard-00-01.nj0au.mongodb.net:27017,cluster0-shard-00-02.nj0au.mongodb.net:27017/admin?ssl=true&replicaSet=atlas-70eajw-shard-0&authSource=admin&retryWrites=true&w=majority',
 	'auto update': true,
 	'session': true,
 	'auth': true,
