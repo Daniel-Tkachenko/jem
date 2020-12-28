@@ -18,7 +18,7 @@ keystone.init({
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'pug',
-	'mongo' : 'mongodb://jemmi_admin:admin1@ds149606.mlab.com:49606/jemmi_dev',
+	'mongo' : 'mongodb+srv://admin:mUXxvXugD0nzOXb3@cluster0.nj0au.mongodb.net/site?retryWrites=true&w=majority',
 	'auto update': true,
 	'session': true,
 	'auth': true,
